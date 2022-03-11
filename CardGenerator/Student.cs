@@ -119,7 +119,7 @@ namespace CardGenerator
             List<Student> studentList = new List<Student>();
             Student tmpStudent;
             var lines = CsvParser.getLinesFromCSV(CsvPath, EncodingName);
-            int count = lines.Length;
+            int count = lines.Count;
 
             foreach (var line in lines)
             {

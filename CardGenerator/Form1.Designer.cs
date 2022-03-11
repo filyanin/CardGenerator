@@ -246,7 +246,7 @@
             this.Controls.Add(this.StartButton);
             this.Controls.Add(this.DataFile);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Создание карточек";
             this.groupBox1.ResumeLayout(false);

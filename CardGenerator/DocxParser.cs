@@ -55,16 +55,16 @@ namespace CardGenerator
             return tmpDoc;
         }
 
-        
 
-        public static void Fill(List<Student> studentList, string year, string header,  string path = "", string fileName = "CardResult.docx")
+
+        public static void Fill(List<Student> studentList, string year, string header, string path = "", string fileName = "CardResult.docx")
         {
-            while (System.IO.File.Exists(path + fileName))
+            while (System.IO.File.Exists(path +"\\"+ fileName))
             {
                 fileName = fileName.Substring(0, fileName.Length - 5) + "_1.docx";
             }
             var resultDoc = Xceed.Words.NET.DocX.Create(fileName);
-            int i = 1;
+            //int i = 1;
             int j = 0;
             Student tmpStudent1;
             Student tmpStudent2;
@@ -97,13 +97,12 @@ namespace CardGenerator
 
         public static void Fill(List<Student> studentList, string year, string header,out int currentCount, string path = "", string fileName = "CardResult.docx")
         {
-            while (System.IO.File.Exists(path + fileName))
+            while (System.IO.File.Exists(path + "\\" + fileName))
             {
                 fileName = fileName.Substring(0, fileName.Length - 5) + "_1.docx";
             }
 
             var resultDoc = Xceed.Words.NET.DocX.Create(fileName);
-            int i = 1;
             int j = 0;
             Student tmpStudent1;
             Student tmpStudent2;

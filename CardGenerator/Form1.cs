@@ -18,6 +18,7 @@ namespace CardGenerator
         {
             InitializeComponent();
             progressBar1.Visible = false;
+            MaximizeBox = false;
             
         }
 
@@ -196,8 +197,13 @@ namespace CardGenerator
                 }
                 catch (Exception exc)
                 {
-                    MessageBox.Show("Сломалось что-то, никто не знает что. Проверьте данные, а после начните молиться, программа самоуничтожается");
-                    Application.Exit();
+                    var res = MessageBox.Show("Сломалось что-то, никто не знает что. Проверьте данные, а после начните молиться, программа самоуничтожается");
+                    
+                    if (res == DialogResult.OK)
+                    {
+                        Application.Exit();
+                    }
+                    
                     
                 }
             }
